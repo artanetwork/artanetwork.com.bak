@@ -1,6 +1,6 @@
 from django import template
 
-# Define your custom template tags and filters here
+# Create your custom template tags and filters here
 
 register = template.Library()
 
