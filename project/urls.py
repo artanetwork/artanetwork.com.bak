@@ -19,9 +19,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
+from filebrowser.sites import site as filebrowser_site
+
 from accounts.views import CustomLoginView, CustomPasswordChangeView
 
 urlpatterns = [
+    path('admin/filebrowser/', filebrowser_site.urls),
     path('admin/login/', CustomLoginView.as_view(), name='login'),
     path('admin/password_change/', CustomPasswordChangeView.as_view(), name='password_change'),
     path('admin/', admin.site.urls),
