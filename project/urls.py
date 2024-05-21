@@ -19,6 +19,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
+from accounts.views import CustomLoginView, CustomPasswordChangeView
+
 urlpatterns = [
+    path('admin/login/', CustomLoginView.as_view(), name='login'),
+    path('admin/password_change/', CustomPasswordChangeView.as_view(), name='password_change'),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
