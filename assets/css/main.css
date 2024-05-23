@@ -3,9 +3,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Roboto", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  --default-font: Vazirmatn, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: Vazirmatn, sans-serif;
+  --nav-font: Vazirmatn, sans-serif;
 }
 
 /* Global Colors */
@@ -20,7 +20,7 @@
   --heading-color: #52565e;
 
   /* Accent Color - This is the main accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out. */
-  --accent-color: #feb900;
+  --accent-color: #f99e26;
 
   /* Contrast Color - This is a color used for text when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors. */
   --contrast-color: #ffffff;
@@ -29,10 +29,10 @@
 /* Nav Menu Colors */
 :root {
   /* Nav Color - This is the default color of the main navmenu links. */
-  --nav-color: rgba(255, 255, 255, 0.55);
+  --nav-color: #3d368d;
 
   /* Nav Hover Color - This color is applied to main navmenu links when they are hovered over. */
-  --nav-hover-color: #ffffff;
+  --nav-hover-color: #f99e26;
 
   /* Nav Dropdown Background Color - This color is used as the background for dropdown boxes that appear when hovering over primary navigation items. */
   --nav-dropdown-background-color: #ffffff;
@@ -41,12 +41,17 @@
   --nav-dropdown-color: #212529;
 
   /* Nav Dropdown Hover Color - Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-  --nav-dropdown-hover-color: #feb900;
+  --nav-dropdown-hover-color: #f99e26;
 }
 
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
+}
+
+/* Global direction */
+:root {
+  direction: rtl;
 }
 
 /*--------------------------------------------------------------
@@ -83,9 +88,9 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: rgba(255, 255, 255);
   --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --heading-color: #3d368d;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
@@ -94,8 +99,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
+  max-height: 48px;
+  margin-left: 8px;
 }
 
 .header .logo h1 {
@@ -120,7 +125,7 @@ h6 {
 ------------------------------*/
 .scrolled .header {
   --background-color: rgba(255, 255, 255, 0.95);
-  --heading-color: #3c3c3c;
+  --heading-color: #3d368d;
   --nav-color: #3c3c3c;
   --nav-hover-color: #3c3c3c;
 }
@@ -149,10 +154,6 @@ h6 {
   .navmenu>ul>li {
     white-space: nowrap;
     padding: 15px 14px;
-  }
-
-  .navmenu>ul>li:last-child {
-    padding-right: 0;
   }
 
   .navmenu a,
@@ -715,7 +716,7 @@ section,
   --background-color: #000000;
   --heading-color: #ffffff;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
   padding: 0;
   display: flex;
@@ -739,6 +740,7 @@ section,
 }
 
 .hero .info h2 {
+  margin-top: 20%;
   margin-bottom: 30px;
   padding-bottom: 30px;
   font-size: 56px;
@@ -828,7 +830,7 @@ section,
 
 @media (min-width: 640px) {
   .hero .carousel-control-prev {
-    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -838,7 +840,7 @@ section,
 
 @media (min-width: 640px) {
   .hero .carousel-control-next {
-    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 

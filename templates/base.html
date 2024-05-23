@@ -1,6 +1,7 @@
 {% load static %}
 {% load mathfilters %}
 {% load persianfilters %}
+{% load customfilters %}
 <!DOCTYPE html>
 <html lang="fa">
     
@@ -31,7 +32,35 @@
         {% block extrastyle %}{% endblock %}
     </head>
 
-    <body>
+    <body class="{% body_class %}">
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="header d-flex align-items-center fixed-top">
+            <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+                <a href="#" class="logo d-flex align-items-center">
+                    <img src="{{ company.logo.url }}" alt="">
+                    <h1 class="sitename">{{ company.name }}</h1>
+                </a>
+
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="#" class="active">صفحه اول</a></li>
+                        <li><a href="#">محصولات</a></li>
+                        <li><a href="#">خدمات</a></li>
+                        <li><a href="#">پروژه‌ها</a></li>
+                        <li><a href="#">اخبار</a></li>
+                        <li><a href="#">وبلاگ</a></li>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav><!-- .navmenu -->
+
+            </div>
+        </header><!-- End Header -->
+
+        {% block content %}{% endblock %}
 
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

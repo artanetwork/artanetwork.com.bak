@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 
 from filebrowser.sites import site as filebrowser_site
 
@@ -28,4 +28,5 @@ urlpatterns = [
     path('admin/login/', CustomLoginView.as_view(), name='login'),
     path('admin/password_change/', CustomPasswordChangeView.as_view(), name='password_change'),
     path('admin/', admin.site.urls),
+    path('', include('homepage.urls', namespace='homepage')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
