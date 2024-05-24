@@ -697,11 +697,11 @@ section,
 }
 
 .section-title h2:before {
-  margin: 0 15px 10px 0;
+  margin: 0 0 10px 15px;
 }
 
 .section-title h2:after {
-  margin: 0 0 10px 15px;
+  margin: 0 15px 10px 0;
 }
 
 .section-title p {
@@ -1339,14 +1339,6 @@ section,
 .projects .portfolio-filters li:hover,
 .projects .portfolio-filters li.filter-active {
   color: var(--accent-color);
-}
-
-.projects .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.projects .portfolio-filters li:last-child {
-  margin-right: 0;
 }
 
 @media (max-width: 575px) {
